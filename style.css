@@ -1,0 +1,76 @@
+body{
+    background-color: aliceblue;
+}
+
+.heading-port{
+    margin: 20px auto;
+    text-align: center;
+}
+
+.score-btn{
+    width: 40px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.main-header{
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+#score-limit{
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    background-color: slategray;
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 50px;
+}
+
+.main-deck{
+    text-align: center;
+    height: 30rem;;
+}
+
+.player-deck{
+    height: 28rem;
+
+}
+
+h3{
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.score-heading{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#score-1, #score-2{
+    font-weight: bold;
+    font-size: 8rem;
+
+}
+
+.winner-deck{
+    background-color: green;
+}
+
+.loser-deck{
+    background-color: red;
+}
+
+.loser-btn{
+    display: none;
+}
+
+#congrats1, #congrats2{
+    margin-top: 40px;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
