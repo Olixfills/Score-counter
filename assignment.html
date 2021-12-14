@@ -17,7 +17,10 @@
         <button id="score-plus" class="score-btn btn btn-success">+</button>
         <h1 class="main-header">Set Score Limit</h1>
         <p id="score-limit">1 </p>
+        <button class="btn btn-primary start-btn" id="start-game">Start</button>
+
     </div>
+
 
     <div class="container main-deck shadow-lg p-3 mb-5 bg-body rounded">
         <div class="row justify-content-evenly">
@@ -26,23 +29,47 @@
                 <h3 id="player-1">Player 1</h3>
                 <p class="score-heading">Score</p>
                 <p id="score-1">0</p>
+
+                
+                    <div class="row">
+                        <div class="col-9 pe-0">
+                            <input type="text" class="form-control" id="player1-name"
+                                placeholder="Please input Player 1 Name">
+                        </div>
+                        <div class="col-3 ps-0 ">
+                            <button type="submit" id="confirm1" class="btn btn-primary mb-3" >Confirm</button>
+                        </div>
+                    </div>
+                
+
                 <div class="d-grid gap-2">
-                    <button id="button-1" class="btn btn-primary" type="button">Add Score</button>
+                    <button id="button-1" class="btn btn-primary no-display" type="button">Add Score</button>
                 </div>
                 <p id="congrats1"></p>
             </div>
 
-            <div id="player2-deck" class="player-deck col-5 shadow p-3 mb-5 rounded">
+            <div id="player2-deck" class="player-deck col-5 col-m-12 shadow p-3 mb-5 rounded">
                 <h3 id="player-2">Player 2</h3>
                 <p class="score-heading">Score</p>
                 <p id="score-2">0</p>
+                
+                    <div class="row">
+                        <div class="col-9 pe-0">
+                            <input type="text" class="form-control" id="player2-name"
+                                placeholder="Please input Player 2 Name">
+                        </div>
+                        <div class="col-3 ps-0 ">
+                            <button type="submit" id="confirm2" class="btn btn-primary mb-3">Confirm</button>
+                        </div>
+                    </div>
+                
                 <div class="d-grid gap-2">
-                    <button id="button-2" class="btn btn-primary" type="button">Add Score</button>
+                    <button id="button-2" class="btn btn-primary no-display" type="button">Add Score</button>
                 </div>
                 <p id="congrats2"></p>
             </div>
-        </div>
 
+        </div>
 
     </div>
 

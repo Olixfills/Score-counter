@@ -1,32 +1,73 @@
-// const playerName1 = prompt("Please input Player 1 Name");
-// const playerName2 = prompt("Please input Player 2 Name");
-
-// let playerNameUpdate1 = document.getElementById('player-1').textContent = playerName1;
-// let playerNameUpdate2 = document.getElementById('player-2').textContent = playerName2;
-
+//Constants
+const submitPlayer1Name = document.getElementById('confirm1');
+const submitPlayer2Name = document.getElementById('confirm2');
+const inputPlayer1Name = document.getElementById('player1-name');
+const inputPlayer2Name = document.getElementById('player2-name');
 
 const buttonLess = document.getElementById('score-less');
 const buttonPlus = document.getElementById('score-plus');
+const buttonForPlayer1 = document.getElementById('button-1');
+const buttonForPlayer2 = document.getElementById('button-2');
+
+const startgameButton = document.getElementById('start-game');
+
+
+//Get player names
+function confirmPlayer1Name(){
+    let inputVar = inputPlayer1Name.value;
+
+    let runner = document.getElementById('player-1').textContent = inputVar;
+
+    buttonForPlayer1.classList.remove('no-display');
+    inputPlayer1Name.classList.add('no-display');
+    submitPlayer1Name.classList.add('no-display');
+    inputPlayer1Name.value = "";
+
+    return runner;
+}
+
+function confirmPlayer2Name(){
+    let inputVar = inputPlayer2Name.value;
+
+    let runner = document.getElementById('player-2').textContent = inputVar;
+
+    buttonForPlayer2.classList.remove('no-display');
+    inputPlayer2Name.classList.add('no-display');
+    submitPlayer2Name.classList.add('no-display');
+    inputPlayer2Name.value = "";
+
+    return runner;
+}
+
+
+
+
+submitPlayer1Name.addEventListener('click', confirmPlayer1Name);
+submitPlayer2Name.addEventListener('click', confirmPlayer2Name);
+
+
+
+//Increase score limit count
 
 let setScore = 1;
 
-function lessScoreLimit(){
+function lessScoreLimit() {
     setScore--;
-    if(setScore > 0){
-    return setScore;
-} 
+    if (setScore > 0) {
+        return setScore;
+    }
 }
 
-function addScoreLimit(){
+function addScoreLimit() {
     setScore++;
     return setScore;
 }
 
-function scoreMinus(){
+function scoreMinus() {
     document.getElementById('score-limit').textContent = lessScoreLimit();
 }
 
-function scorePlus(){
+function scorePlus() {
     document.getElementById('score-limit').textContent = addScoreLimit();
 
 }
@@ -38,13 +79,7 @@ buttonPlus.addEventListener('click', scorePlus);
 
 
 
-
-
-
-
-const buttonForPlayer1 = document.getElementById('button-1');
-const buttonForPlayer2 = document.getElementById('button-2');
-
+//Score Counter
 let v = 0;
 let i = 0;
 
@@ -96,8 +131,15 @@ buttonForPlayer2.addEventListener('click', addScorePlayer2);
 
 
 
-// console.log(updatePlayerScore2());
+//disable buttons untill all names are inputed
 
 
+    buttonForPlayer1.disabled = true;
+    buttonForPlayer2.disabled = true;
 
-//conclusion function
+function startGame(){
+    buttonForPlayer1.disabled = false;
+    buttonForPlayer2.disabled = false;
+}
+
+startgameButton.addEventListener('click', startGame);
